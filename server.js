@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// the first arg is the 'starts with' path
+// the first arg is the 'starts with' path (prefix)
 // the paths within the route modules are appended to the 'starts with paths'
 app.use('/', indexRouter);
 app.use('/todos', todosRouter);
